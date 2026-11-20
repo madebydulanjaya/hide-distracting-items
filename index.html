@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Hide Distracting Items</title>
+<style>
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaf3ff;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1f2430;
+    min-height: 100%;
+  }
+
+  .bg-shapes {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .bg-shapes span {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0px);
+    opacity: 0.55;
+  }
+
+  .shape-1 { width: 420px; height: 420px; background: #9ccbff; top: -140px; left: -120px; }
+  .shape-2 { width: 260px; height: 260px; background: #7fb8ff; top: -40px; left: 40px; }
+  .shape-3 { width: 460px; height: 460px; background: #b8a6ff; bottom: -180px; right: -140px; }
+  .shape-4 { width: 260px; height: 260px; background: #a9e4ff; bottom: -40px; right: 60px; }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 32px 96px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 48px 44px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    opacity: 0.65;
+    margin: 0 0 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 36px 0 12px;
+    letter-spacing: -0.01em;
+  }
+
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
+  p, li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 12px;
+    opacity: 0.85;
+  }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 22px;
+  }
+
+  .pill {
+    display: inline-block;
+    background: rgba(10, 132, 255, 0.16);
+    color: #0a5fc4;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 32px 0;
+    border: none;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.55;
+    margin-top: 40px;
+  }
+
+  a {
+    color: #0a5fc4;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .card { padding: 32px 24px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-shapes">
+  <span class="shape-1"></span>
+  <span class="shape-2"></span>
+  <span class="shape-3"></span>
+  <span class="shape-4"></span>
+</div>
+
+<div class="wrapper">
+  <div class="card">
+    <span class="pill">Privacy Policy</span>
+    <h1>Hide Distracting Items</h1>
+    <p class="subtitle">Last updated: November 20, 2026</p>
+
+    <h2>Overview</h2>
+    <p>
+      Hide Distracting Items is a Chrome extension that lets you pick elements on a
+      web page (a banner, a sidebar, a pop-up) and hide them. It remembers what you
+      hid for each site and hides it again on later visits. This policy explains what
+      data the extension uses and, just as importantly, what it does not do with it.
+    </p>
+
+    <h2>No data collection</h2>
+    <p>
+      Hide Distracting Items does not collect, transmit, sell, or share any personal
+      data with us or with any third party. There are no analytics scripts, no
+      tracking, no advertising, no remote servers, and no network requests made by
+      this extension at any point. It does not load or run remote code.
+    </p>
+
+    <h2>What the extension accesses, and why</h2>
+    <ul>
+      <li>
+        <strong>The page you are on</strong> &mdash; when you click the toolbar icon
+        or use the keyboard shortcut, the extension starts its element picker in
+        that tab. It does not read the text, form fields, or other content of the
+        page. It only works out which element you clicked so that it can hide it.
+      </li>
+      <li>
+        <strong>The site address</strong> &mdash; the extension uses the host name
+        of the site (for example <code>example.com</code>) to look up which items
+        you have hidden there. When a page loads, it re-applies your saved rules.
+        Your browsing history is not recorded or sent anywhere.
+      </li>
+      <li>
+        <strong>Screenshots for thumbnails</strong> &mdash; at the moment you hide an
+        item, the extension takes a screenshot of the visible area of the tab and
+        crops a small thumbnail of just that item, so you can recognise it in the
+        popup and bring it back. The thumbnail is stored only on your device. It may
+        contain whatever was visible in that item at the time.
+      </li>
+    </ul>
+
+    <h2>What's stored, and where</h2>
+    <p>
+      For each site where you hide something, the extension stores the CSS selector
+      of the item, its thumbnail, and the time it was hidden. It also stores the
+      last position of the picker toolbar. This is kept in your browser's local
+      extension storage (<code>chrome.storage.local</code>) on your device. It is not
+      synced to your account and is not accessible to us or anyone else.
+    </p>
+    <p>
+      You can delete this data at any time: restore an item from the popup, use
+      &ldquo;Show all hidden items&rdquo; for a site, or remove the extension, which
+      deletes everything it stored.
+    </p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab</strong> &mdash; temporary access to the current tab after you click the icon or use the shortcut.</li>
+      <li><strong>scripting</strong> &mdash; to start the picker and to add or remove the style rules that hide your chosen items.</li>
+      <li><strong>storage</strong> &mdash; to save your hidden items on your device.</li>
+      <li><strong>webNavigation</strong> &mdash; to re-apply your saved rules as soon as a page or frame loads.</li>
+      <li><strong>Access to http and https sites</strong> &mdash; so your saved rules can be re-applied automatically on any site where you chose to hide something.</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Hide Distracting Items does not knowingly collect any information from anyone,
+      including children, because it does not collect information from anyone at all.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy is ever updated, the revised version will be posted at this same
+      page with an updated &ldquo;Last updated&rdquo; date.
+    </p>
+
+    <hr class="divider" />
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or the extension can be directed via the support
+      contact listed on the Chrome Web Store listing page.
+    </p>
+  </div>
+
+  <footer>Hide Distracting Items &middot; Privacy Policy</footer>
+</div>
+
+</body>
+</html>
